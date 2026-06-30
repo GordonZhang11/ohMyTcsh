@@ -1,3 +1,6 @@
+#!/usr/bin/env tcsh
+
+
 #  Oh My Tcsh - A Plugin Manager for Tcsh
 #  ======================================
 #  Copyright 2026 Gordon Zhang
