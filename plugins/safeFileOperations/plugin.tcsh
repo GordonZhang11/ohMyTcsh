@@ -1,9 +1,9 @@
 #!/usr/bin/env tcsh
 
 
-#  ======================================
-#  Oh My Tcsh - A Plugin Manager for Tcsh
-#  ======================================
+#  ==============================================================
+#  OMT Plugin Safe File Operations: Safe file operations for TCSH
+#  ==============================================================
 #  Copyright 2026 Gordon Zhang
 #  Licensed under the 3-Clause BSD License
 #  =======================================
@@ -19,29 +19,8 @@
 #  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-# ===================
-# File: ohMyTcsh.tcsh
-# ===================
-# Main script for ohMyTcsh
-# ========================
 
-
-
-# Init
-source ~/.omt/src/omtInit.tcsh # Many default variables are defined in it...
-
-
-# Load Config file
-if ( -f $configFile ) then
-	source $configFile
-endif
-
-
-# TODO external plugin installation management
-
-
-# OMT Plugin Load
-omtPluginLoad
-
-# Enable coloured terminal outputs
-setenv COLORTERM
+# Prompting before file operations
+alias rm 'rm -i'
+alias cp 'cp -i'
+alias mv 'mv -i'

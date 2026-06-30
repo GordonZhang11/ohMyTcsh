@@ -1,9 +1,9 @@
 #!/usr/bin/env tcsh
 
 
-#  ======================================
-#  Oh My Tcsh - A Plugin Manager for Tcsh
-#  ======================================
+#  ==================================================
+#  OMT Plugin prompts: Improved prompts for Tcsh
+#  ==================================================
 #  Copyright 2026 Gordon Zhang
 #  Licensed under the 3-Clause BSD License
 #  =======================================
@@ -19,29 +19,17 @@
 #  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-# ===================
-# File: ohMyTcsh.tcsh
-# ===================
-# Main script for ohMyTcsh
-# ========================
+# TODO theming support
 
 
+# Define colours
+set blue = "%{\033[34m%}"
+set cyan = "%{\033[36m%}"
+set green = "%{\033[32m%}"
+set reset = "%{\033[0m%}"
 
-# Init
-source ~/.omt/src/omtInit.tcsh # Many default variables are defined in it...
+# Prompt format: [User@Host] [Current Dir] =>
+set prompt = "${blue}%n@%m${reset} ${cyan}%~${reset} ${green}>${reset} "
 
-
-# Load Config file
-if ( -f $configFile ) then
-	source $configFile
-endif
-
-
-# TODO external plugin installation management
-
-
-# OMT Plugin Load
-omtPluginLoad
-
-# Enable coloured terminal outputs
-setenv COLORTERM
+# Optional: Set terminal title dynamically to the current directory
+set title = "TCSH %{\033]0;%n@%m: %~\007%}"
