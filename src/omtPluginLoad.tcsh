@@ -19,27 +19,38 @@
 #  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-# ===================
-# File: ohMyTcsh.tcsh
-# ===================
-# Main script for ohMyTcsh
 # ========================
+# File: src/omtPluginLoad.tcsh
+# ========================
+# Plugin Loader for Tcsh
+# ======================
 
 
 
-# Init
-source "src/omtInit.tcsh" # Many default variables are defined in it...
+# Get plugin name from args
+set plugins = $argv
 
 
-# Load Config file
-if ( -f $configFile ) then
-	source $configFile
+# Load plugin
+if ( $#plugins == 1 ) then
+	# If plugins set to be empty.
+	# Load all plugins
+
+	foreach plugin  ($pluginsDir/*)
+		if (-e $plugin/plugin.tcsh) then
+			source $plugin/plugin.tcsh
+		endif
+	end
+else
+	# If plugins specified
+	# Load specified ones
+
+	foreach plugin ($plugins)
+        set pluginEntry = $pluginsDir/$plugin/plugin.tcsh
+		if (-e $pluginEntry) then
+            source $pluginEntry
+        endif
+        # TODO: else plugin not found
+	end
 endif
-
-
-# TODO external plugin installation management
-
-
-# OMT Plugin Load
-omtPluginLoad
 
