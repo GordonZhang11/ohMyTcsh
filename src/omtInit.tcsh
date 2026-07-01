@@ -40,9 +40,15 @@ set _themesDir  = "$_omtDir/themes"
 set omtPlugins    = ( )
 
 
+# Default theme init
+set omtColour1 = "%{\033[34m%}"
+set omtColour2 = "%{\033[36m%}"
+set omtColour3 = "%{\033[32m%}"
+set _reset = "%{\033[0m%}"
+
+
+
 # Setup  aliases for OMT scripts
 alias omtPluginLoad "source $_scriptsDir/omtPluginLoad.tcsh"
 # TODO pluginInstall script
-
-
 

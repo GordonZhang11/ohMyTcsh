@@ -22,14 +22,6 @@
 # TODO theming support
 
 
-# Define colours
-set blue = "%{\033[34m%}"
-set cyan = "%{\033[36m%}"
-set green = "%{\033[32m%}"
-set reset = "%{\033[0m%}"
+# Prompt: [CWD] >
+set prompt = "${omtColour1}%~${_reset} ${omtColour2} >${_reset} "
 
-# Prompt format: [User@Host] [Current Dir] =>
-set prompt = "${blue}%n@%m${reset} ${cyan}%~${reset} ${green}>${reset} "
-
-# Optional: Set terminal title dynamically to the current directory
-set title = "TCSH %{\033]0;%n@%m: %~\007%}"
