@@ -13,11 +13,11 @@ Unlike modern shells (Zsh, Fish, ...), Tcsh lacks a native, widely-adopted plugi
 
 ## Dependencies
 - General Unix / Linux systems.
-Developed on:
+Developed on
 `FreeBSD 15.1-RELEASE-p1 GENERIC amd64`
 
 
-- `tcsh`
+- Tcsh.
 Developed on:
 `tcsh 6.22.04 (Astron) 2021-04-26 (x86_64-amd-FreeBSD) options wide,nls,dl,al,kan,sm,rh,color,filec`
 
