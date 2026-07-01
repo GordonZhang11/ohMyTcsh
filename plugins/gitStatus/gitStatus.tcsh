@@ -5,8 +5,8 @@ if (-d .git) then
     set _modified = `git status -s | grep "M" -c`
 
     if ($_modified == 0) then
-        echo -n "Git <${_gitBranch}> / "
+        echo -n "Git <${_gitBranch}> "
     else
-        echo -n "Git <${_gitBranch}> ($_modified)/ "
+        echo -n "Git <${_gitBranch}> ($_modified) "
     endif
 endif
