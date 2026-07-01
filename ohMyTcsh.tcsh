@@ -32,8 +32,8 @@ source ~/.omt/src/omtInit.tcsh # Many default variables are defined in it...
 
 
 # Load Config file
-if ( -f $configFile ) then
-	source $configFile
+if ( -f $_omtConfigFile ) then
+	source $_omtConfigFile
 endif
 
 

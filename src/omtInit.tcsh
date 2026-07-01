@@ -29,18 +29,19 @@
 
 
 # Set default paths
-set configFile = "~/.omtConfig.tcsh"
-set omtDir     = "~/.omt"
-set pluginsDir = "$omtDir/plugins"
-set scriptsDir = "$omtDir/src"
+set _omtConfigFile = "~/.omtConfig.tcsh"
+set _omtDir     = "~/.omt"
+set _pluginsDir = "$_omtDir/plugins"
+set _scriptsDir = "$_omtDir/src"
+set _themesDir  = "$_omtDir/themes"
 
-# Plugins set to be empty by default
+# Plugins set to be empty by default - Can be overriden in cofig file.
 # i.e. All Plugins will be loaded
-set plugins    = ( )
+set omtPlugins    = ( )
 
 
 # Setup  aliases for OMT scripts
-alias omtPluginLoad "source $scriptsDir/omtPluginLoad.tcsh"
+alias omtPluginLoad "source $_scriptsDir/omtPluginLoad.tcsh"
 # TODO pluginInstall script
 
 

@@ -28,27 +28,27 @@
 
 
 # Get plugin name from args
-set plugins = $argv
+set _plugins = $argv
 
 
 # Load plugin
-if ( $#plugins == 1 ) then
+if ( $#_plugins == 1 ) then
 	# If plugins set to be empty.
 	# Load all plugins
 
-	foreach plugin  ($pluginsDir/*)
-		if (-e $plugin/plugin.tcsh) then
-			source $plugin/plugin.tcsh
+	foreach _plugin  ($_pluginsDir/*)
+		if (-e $_plugin/plugin.tcsh) then
+			source $_plugin/plugin.tcsh
 		endif
 	end
 else
 	# If plugins specified
 	# Load specified ones
 
-	foreach plugin ($plugins)
-        set pluginEntry = $pluginsDir/$plugin/plugin.tcsh
-		if (-e $pluginEntry) then
-            source $pluginEntry
+	foreach _plugin ($_plugins)
+        set _pluginEntry = $_pluginsDir/$_plugin/plugin.tcsh
+		if (-e $_pluginEntry) then
+            source $_pluginEntry
         endif
         # TODO: else plugin not found
 	end
