@@ -33,6 +33,8 @@ OMT bridges the gap by providing
 | `prompt` | Fancy prompts |
 | `safeFileOperations` | `rm` `mv` `cp` safe aliasing |
 
+TODO: Theming Support
+
 ## Dependencies
 
 - General Unix / Linux systems.
