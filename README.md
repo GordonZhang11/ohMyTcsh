@@ -60,7 +60,7 @@ source ~/.omt/ohMyTcsh.tcsh
 
 ---
 
-## More to READ
+## More to Read
 
 ### Is Tcsh the "right" shell for me ?
 
