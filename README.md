@@ -36,7 +36,7 @@ TODO: Theming Support
 
 ## Dependencies
 
-- General Unix / Linux systems.
+- Generic Unix / Linux systems.
   Developed on
   `FreeBSD 15.1-RELEASE-p1 GENERIC amd64`
 
