@@ -46,11 +46,12 @@ else
 	# Load specified ones
 
 	foreach _plugin ($_plugins)
-        set _pluginEntry = $_pluginsDir/$_plugin/plugin.tcsh
+    set _pluginEntry = $_pluginsDir/$_plugin/plugin.tcsh
 		if (-e $_pluginEntry) then
-            source $_pluginEntry
-        endif
-        # TODO: else plugin not found
+      source $_pluginEntry
+    else
+      echo "OMT ERROR: Plugin $_plugin not found."
+    endif
 	end
 endif
 
