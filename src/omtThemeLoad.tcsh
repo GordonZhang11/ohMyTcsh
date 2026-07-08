@@ -19,40 +19,22 @@
 #  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-# ========================
-# File:    src/omtPluginLoad.tcsh
-# Command: omtPluginLoad
-# ========================
-# Plugin Loader for OMT
-# ======================
+# ==================
+# File:    src/omtThemeLoad.tcsh
+# Command: omtThemeLoad
+# ==================
+# Theme loader for OMT
+# ====================================================
 
 
 
-# Get plugin name from args
-set _plugins = $argv
+# Get theme name from args
+set _omtTheme = $1
+
+set _themeConfigFile = "$_themesDir/$_omtTheme.tcsh"
+
+source $_themeConfigFile
 
 
-# Load plugin
-if ( $#_plugins == 1 ) then
-	# If plugins set to be empty.
-	# Load all plugins
-
-	foreach _plugin  ($_pluginsDir/*)
-		if (-e $_plugin/plugin.tcsh) then
-			source $_plugin/plugin.tcsh
-		endif
-	end
-else
-	# If plugins specified
-	# Load specified ones
-
-	foreach _plugin ($_plugins)
-    set _pluginEntry = $_pluginsDir/$_plugin/plugin.tcsh
-		if (-e $_pluginEntry) then
-      source $_pluginEntry
-    else
-      echo "OMT ERROR: Plugin $_plugin not found."
-    endif
-	end
-endif
-
+# Colour reset symbol
+set _reset = "%{\033[0m%}"

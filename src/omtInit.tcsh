@@ -37,18 +37,14 @@ set _themesDir  = "$_omtDir/themes"
 
 # Plugins set to be empty by default - Can be overriden in cofig file.
 # i.e. All Plugins will be loaded
-set omtPlugins    = ( )
-
-
-# Default theme init
-set omtColour1 = "%{\033[34m%}"
-set omtColour2 = "%{\033[36m%}"
-set omtColour3 = "%{\033[32m%}"
-set _reset = "%{\033[0m%}"
-
+set omtPlugins = ( )
+set omtTheme   = "default"
 
 
 # Setup  aliases for OMT scripts
-alias omtPluginLoad "source $_scriptsDir/omtPluginLoad.tcsh"
+alias omtThemeLoad  "source $_scriptsDir/omtThemeLoad.tcsh $omtTheme"
+alias omtPluginLoad "source $_scriptsDir/omtPluginLoad.tcsh $omtPlugins"
+
+
 # TODO pluginInstall script
 

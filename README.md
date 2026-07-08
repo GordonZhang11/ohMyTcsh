@@ -32,8 +32,6 @@ OMT bridges the gap by providing
 | `prompt`             | Fancy prompts                     |
 | `safeFileOperations` | `rm` `mv` `cp` safe aliasing      |
 
-TODO: Theming Support
-
 ## Dependencies
 
 - Generic Unix / Linux systems.
@@ -100,7 +98,7 @@ Whilst Tcsh is not recommended for:
 
 - Shell programming
 
-### And, finally, the project code of conduct ...
+### And, finally, the project code of conduct
 
 (As already mentioned) Oh My Tcsh is here to
 fill the massive ecosystem gap of Tcsh.

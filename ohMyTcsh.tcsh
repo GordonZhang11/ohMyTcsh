@@ -42,9 +42,10 @@ endif
 
 
 # OMT Plugin Load
+omtThemeLoad
 omtPluginLoad
 
-# Enable coloured terminal outputs
+# Enable coloured terminal outputs for ls, tree, etc
 setenv COLORTERM
 setenv LS_COLORS
 
