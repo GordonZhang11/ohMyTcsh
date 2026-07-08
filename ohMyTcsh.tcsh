@@ -46,3 +46,6 @@ omtPluginLoad
 
 # Enable coloured terminal outputs
 setenv COLORTERM
+setenv LS_COLORS
+
+
