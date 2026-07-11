@@ -27,15 +27,32 @@
 # ====================================================
 
 
+# Set Default theme valuables.
+# in case that theme failed to load.
+set omtColor1
+set omtColor2
+set omtColor3
+
 
 # Get theme name from args
-set omtTheme = $1
+set _theme = $1
 
-set _themeConfigFile = "$_omtThemesDir/$omtTheme.tcsh"
+if ($?_theme == 0) then
+  exit 0
+endif
 
-source $_themeConfigFile
+set _themeConfigFile = "$_omtThemesDir/$_theme.tcsh"
+
+if (-f $_themeConfigFile) then
+  source $_themeConfigFile
+else
+  echo "OMT WARNING: Theme $_theme not found."
+  exit 0
+endif
 
 
 # Colour reset symbol
 set _reset = "%{\033[0m%}"
 
+
+unset _theme
