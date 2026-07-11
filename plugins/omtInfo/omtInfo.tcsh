@@ -1,12 +1,12 @@
-set omtReleaseFile = $_omtDir/RELEASE
+set _omtReleaseFile = $_omtDir/RELEASE
 
 set _version = unknown # Default value Unknown
-if (-f $omtReleaseFile) set _version = `cat $omtReleaseFile`
+if (-f $_omtReleaseFile) set _version = `cat $_omtReleaseFile`
 
 
-echo "Oh My Tcsh ( Version $_version, on $_omtPlatform )"
+echo "Oh My Tcsh ( Version $_version, on $_omtOS )"
 echo "Copyright (c) 2026 Gordon Zhang. "
 echo "Licensed under the 3-Clause BSD License"
 
-unset _version omtReleaseFile
+unset _version _omtReleaseFile
 
