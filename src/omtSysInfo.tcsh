@@ -55,7 +55,6 @@ if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
   if ($?_tputPath && -x $_tputPath) then
 
     set _availColors = `$_tputPath colors`
-    echo $_availColors
 
     # If detection successful
     if ($status == 0) then
