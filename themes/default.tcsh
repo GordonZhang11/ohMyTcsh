@@ -1,9 +1,10 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
-#  ==================================================
+#  ========================================
 #  OMT Theme Default: Default theme for OMT
-#  ==================================================
+#  ========================================
 #  Copyright 2026 Gordon Zhang
 #  Licensed under the 3-Clause BSD License
 #  =======================================

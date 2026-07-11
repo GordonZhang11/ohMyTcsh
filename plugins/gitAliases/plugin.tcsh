@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  ==================================================
 #  OMT Plugin Git Aliases: Shortcuts for git commands

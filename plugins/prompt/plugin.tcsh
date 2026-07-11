@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  =============================================
 #  OMT Plugin prompts: Improved prompts for Tcsh

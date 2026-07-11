@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  ======================================
 #  Oh My Tcsh - A Plugin Manager for Tcsh

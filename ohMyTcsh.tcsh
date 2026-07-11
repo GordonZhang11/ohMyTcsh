@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  ======================================
 #  Oh My Tcsh - A Plugin Manager for Tcsh
@@ -47,7 +48,7 @@ omtThemeLoad
 omtPluginLoad
 
 
-if ($_omtColors) then
+if ( $_omtColors ) then
   # Enable coloured terminal outputs for ls, tree, etc
   setenv COLORTERM
   setenv LS_COLORS

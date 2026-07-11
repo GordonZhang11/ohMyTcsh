@@ -1,7 +1,9 @@
+# SPDX-License-Identifier: BSD-3-Clause
+
 set _omtReleaseFile = $_omtDir/RELEASE
 
 set _version = unknown # Default value Unknown
-if (-f $_omtReleaseFile) set _version = `cat $_omtReleaseFile`
+if ( -f $_omtReleaseFile ) set _version = `cat $_omtReleaseFile`
 
 
 echo "Oh My Tcsh ( Version $_version, on $_omtOS )"

@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  ==================================================
 #  OMT Plugin Aliases: Shortcuts for daily operations

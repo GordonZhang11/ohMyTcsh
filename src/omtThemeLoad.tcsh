@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  ======================================
 #  Oh My Tcsh - A Plugin Manager for Tcsh
@@ -37,13 +38,13 @@ set omtColor3
 # Get theme name from args
 set _theme = $1
 
-if ($?_theme == 0) then
+if ( $?_theme == 0 ) then
   exit 0
 endif
 
 set _themeConfigFile = "$_omtThemesDir/$_theme.tcsh"
 
-if (-f $_themeConfigFile) then
+if ( -f $_themeConfigFile ) then
   source $_themeConfigFile
 else
   echo "OMT WARNING: Theme $_theme not found."

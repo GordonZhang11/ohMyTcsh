@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  ======================================
 #  Oh My Tcsh - A Plugin Manager for Tcsh
@@ -68,21 +69,21 @@ if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
   # Terminal Dimensions Detection
   # -----------------------------
   
-  if ($?omtTermCols == 0) then
+  if ( $?omtTermCols == 0 ) then
     set _omtTermCols = 80 # Default Value 80
 
-    if ($?_tputPath && -x $_tputPath) then
+    if ( $?_tputPath && -x $_tputPath ) then
       set _cols = `$_tputPath cols`
-      if ($status == 0 &&) set _omtTermCols = $_cols
+      if ( $status == 0 && ) set _omtTermCols = $_cols
     endif
   endif
 
-  if ($?omtTermRows == 0) then
+  if ( $?omtTermRows == 0 ) then
     set _omtTermRows = 80 # Default Value 80
 
-    if ($?_tputPath && -x $_tputPath) then
+    if ( $?_tputPath && -x $_tputPath ) then
       set _lines = `$_tputPath cols`
-      if ($status == 0) set _omtTermRows = $_lines
+      if ( $status == 0 ) set _omtTermRows = $_lines
     endif
   endif
 endif

@@ -1,5 +1,6 @@
 #!/usr/bin/env tcsh
 
+# SPDX-License-Identifier: BSD-3-Clause
 
 #  ======================================
 #  Oh My Tcsh - A Plugin Manager for Tcsh
@@ -37,8 +38,8 @@ if ( $#_plugins == 1 ) then
 	# If plugins set to be empty.
 	# Load all plugins
 
-	foreach _plugin  ($_omtPluginsDir/*)
-		if (-e $_plugin/plugin.tcsh) then
+	foreach _plugin  ( $_omtPluginsDir/* )
+		if ( -e $_plugin/plugin.tcsh ) then
 			source $_plugin/plugin.tcsh
 		endif
 	end
@@ -46,9 +47,9 @@ else
 	# If plugins specified
 	# Load specified ones
 
-	foreach _plugin ($_plugins)
+	foreach _plugin ( $_plugins )
     set _pluginEntry = $_omtPluginsDir/$_plugin/plugin.tcsh
-		if (-e $_pluginEntry) then
+		if ( -e $_pluginEntry ) then
       source $_pluginEntry
     else
       echo "OMT ERROR: Plugin $_plugin not found."
