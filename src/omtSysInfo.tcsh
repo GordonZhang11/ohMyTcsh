@@ -82,7 +82,7 @@ if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
     set _omtTermRows = 80 # Default Value 80
 
     if ( $?_tputPath && -x $_tputPath ) then
-      set _lines = `$_tputPath cols`
+      set _lines = `$_tputPath lines`
       if ( $status == 0 ) set _omtTermRows = $_lines
     endif
   endif
