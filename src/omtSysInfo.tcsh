@@ -26,27 +26,68 @@
 # ==============================
 
 
+# ------------
+# OS Detection
+# ------------
 # Platform, expected *BSD, Darwin, Linux
-if ($?_omtPlatform == 0) then
+if ($?_omtOS == 0) then
   # Automatically detect system information only if 
   # the variable isn;t already set.
   # Users are able to manually set these variables
   # in the OMT config file
 
-  set omtPlatform = `uname -s`
-endif
+  set _omtOS = `uname -s`
 
+  # Set to unknown if detection failed.
+  if ($status != 0)  set _omtOS = "Unknown"
+endif
 
 if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
-  set _availColors = `tput colors`
-  if ($_availColors >= 8) then
-    set omtColors = 1
+
+  # --------------------------------
+  # Terminal Color Support Detection
+  # --------------------------------
+  set _omtColors    = 0
+  set _omt256Colors = 0
+
+  set _tputPath = `which tput`
+
+  if ($?_tputPath && -x $_tputPath) then
+
+    set _availColors = `$_tputPath colors`
+    echo $_availColors
+
+    # If detection successful
+    if ($status == 0) then
+      if ($_availColors >= 8) set _omtColors = 1
+      if ($_availColors >= 256) set _omt256Colors = 1
+      endif
+    endif
   endif
 
-  if ($_availColors >= 256) then
-    set omt256Colors = 1
+  # -----------------------------
+  # Terminal Dimensions Detection
+  # -----------------------------
+  
+  if ($?omtTermCols == 0) then
+    set _omtTermCols = 80 # Default Value 80
+
+    if ($?_tputPath && -x $_tputPath) then
+      set _cols = `$_tputPath cols`
+      if ($status == 0 &&) set _omtTermCols = $_cols
+    endif
   endif
 
-  set omtTermCols  = `tput cols`
-  set omtTermLines = `tput lines`
+  if ($?omtTermRows == 0) then
+    set _omtTermRows = 80 # Default Value 80
+
+    if ($?_tputPath && -x $_tputPath) then
+      set _lines = `$_tputPath cols`
+      if ($status == 0) set _omtTermRows = $_lines
+    endif
+  endif
 endif
+
+
+unset _tputPath _availColors _cols _lines
+

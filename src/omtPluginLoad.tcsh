@@ -37,7 +37,7 @@ if ( $#_plugins == 1 ) then
 	# If plugins set to be empty.
 	# Load all plugins
 
-	foreach _plugin  ($omtPluginsDir/*)
+	foreach _plugin  ($_omtPluginsDir/*)
 		if (-e $_plugin/plugin.tcsh) then
 			source $_plugin/plugin.tcsh
 		endif
@@ -47,7 +47,7 @@ else
 	# Load specified ones
 
 	foreach _plugin ($_plugins)
-    set _pluginEntry = $omtPluginsDir/$_plugin/plugin.tcsh
+    set _pluginEntry = $_omtPluginsDir/$_plugin/plugin.tcsh
 		if (-e $_pluginEntry) then
       source $_pluginEntry
     else
@@ -55,4 +55,7 @@ else
     endif
 	end
 endif
+
+
+unset _plugin _pluginEntry _plugins
 

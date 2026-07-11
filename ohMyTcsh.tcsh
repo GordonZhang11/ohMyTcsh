@@ -33,8 +33,8 @@ source ~/.omt/src/omtInit.tcsh # Many default variables are defined in it...
 
 
 # Load Config file
-if ( -f $omtConfigFile ) then
-	source $omtConfigFile
+if ( -f $_omtConfigFile ) then
+	source $_omtConfigFile
 endif
 
 
@@ -46,8 +46,11 @@ omtSysInfoLoad
 omtThemeLoad
 omtPluginLoad
 
-# Enable coloured terminal outputs for ls, tree, etc
-setenv COLORTERM
-setenv LS_COLORS
+
+if ($_omtColors) then
+  # Enable coloured terminal outputs for ls, tree, etc
+  setenv COLORTERM
+  setenv LS_COLORS
+endif
 
 

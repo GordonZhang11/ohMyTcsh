@@ -10,3 +10,5 @@ if (-d .git) then
         echo -n "Git <${_gitBranch}> ($_modified) "
     endif
 endif
+
+unset _gitBranch _modified

@@ -31,7 +31,7 @@
 # Get theme name from args
 set omtTheme = $1
 
-set _themeConfigFile = "$omtThemesDir/$omtTheme.tcsh"
+set _themeConfigFile = "$_omtThemesDir/$omtTheme.tcsh"
 
 source $_themeConfigFile
 
