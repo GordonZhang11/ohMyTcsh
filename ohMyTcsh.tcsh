@@ -33,15 +33,16 @@ source ~/.omt/src/omtInit.tcsh # Many default variables are defined in it...
 
 
 # Load Config file
-if ( -f $_omtConfigFile ) then
-	source $_omtConfigFile
+if ( -f $omtConfigFile ) then
+	source $omtConfigFile
 endif
 
 
 # TODO external plugin installation management
 
 
-# OMT Plugin Load
+# OMT Modules Load
+omtSysInfoLoad
 omtThemeLoad
 omtPluginLoad
 

@@ -19,23 +19,34 @@
 #  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-# ==================
-# File:    src/omtThemeLoad.tcsh
-# Command: omtThemeLoad
-# ==================
-# Theme loader for OMT
-# ====================================================
+# =========================
+# File: src/omtSysInfo.tcsh
+# =========================
+# Provides platform information.
+# ==============================
 
 
+# Platform, expected *BSD, Darwin, Linux
+if ($?_omtPlatform == 0) then
+  # Automatically detect system information only if 
+  # the variable isn;t already set.
+  # Users are able to manually set these variables
+  # in the OMT config file
 
-# Get theme name from args
-set omtTheme = $1
-
-set _themeConfigFile = "$omtThemesDir/$omtTheme.tcsh"
-
-source $_themeConfigFile
+  set omtPlatform = `uname -s`
+endif
 
 
-# Colour reset symbol
-set _reset = "%{\033[0m%}"
+if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
+  set _availColors = `tput colors`
+  if ($_availColors >= 8) then
+    set omtColors = 1
+  endif
 
+  if ($_availColors >= 256) then
+    set omt256Colors = 1
+  endif
+
+  set omtTermCols  = `tput cols`
+  set omtTermLines = `tput lines`
+endif

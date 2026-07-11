@@ -24,8 +24,8 @@ alias ls   "ls -G"
 alias tree "tree -C"
 
 
-alias ll  "ls -l"
-alias la  "ls -al"
+alias ll  "ls -lh"
+alias la  "ls -alh"
 
 alias ..  "cd .."
 alias ... "cd ../.."
