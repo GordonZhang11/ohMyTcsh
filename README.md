@@ -5,16 +5,16 @@
 ## Introduction
 
 TENEX C Shell ( `tcsh` ) is used across Various UNIX / Linux systems.
-Whilst it is no longer used on modern platforms,
+Although it is no longer widely used on modern platforms,
 it continues to be an important choice on many legacy systems.
 
 Oh My Tcsh ( OMT ) is designed to bridge the gap and
 **improve the experience of the legacy systems**.
 
-With batteries included, OMT helps the existing legacy Tcsh users **improve their
+With batteries included, OMT helps the legacy Tcsh users **improve their
 interactive shell experience**, using the minimum amount of resources.
-It 's not an attempt to make `tcsh` another Zsh or Fish,
-but rather to empower the classic shell it is.
+It is not an attempt to make `tcsh` another Zsh or Fish,
+but rather to empower the classic shell it already is.
 
 ## Dependencies
 
@@ -53,7 +53,7 @@ source ~/.omt/ohMyTcsh.tcsh
 
 Or copy `.sample.tcshrc` to `~/.tcshrc` as required.
 
-## Availible Plugins
+## Available Plugins
 
 | Plugin               | Description                       |
 | -------------------- | --------------------------------- |
@@ -61,8 +61,8 @@ Or copy `.sample.tcshrc` to `~/.tcshrc` as required.
 | `gitAliases`         | Shortcuts for common git commands |
 | `gitStatus`          | Git status display in the prompt  |
 | `omtInfo`            | OMT Information                   |
-| `prompt`             | Prompting                         |
-| `safeFileOperations` | `rm` `mv` `cp` safe aliasing      |
+| `prompt`             | Prompt Display                    |
+| `safeFileOperations` | `rm` `mv` `cp` safer aliases      |
 
 ## Note on Tcsh Scripting
 
@@ -79,4 +79,4 @@ the interactive Tcsh Shell is still used in a few scenarios.
 OMT is designed to enhance the **interactive shell experience**,
 not to encourage complex scripting in Tcsh.
 
-Refer to [Tcsh FAQ](https://www.tcsh.org/faq/) for information about Tcsh.
+Refer to [Tcsh FAQ](https://www.tcsh.org/faq/) for more information.
