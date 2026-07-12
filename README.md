@@ -85,4 +85,5 @@ Refer to [Tcsh FAQ](https://www.tcsh.org/faq/) for more information.
 ## Copyright Information
 
 Copyright (c) 2026 Gordon Zhang.
-Licensed under the 3-Clause BSD License
+
+Licensed under the 3-Clause BSD License.
