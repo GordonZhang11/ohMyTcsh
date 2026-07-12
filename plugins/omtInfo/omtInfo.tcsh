@@ -1,4 +1,7 @@
+#!/usr/bin/env tcsh
+
 # SPDX-License-Identifier: BSD-3-Clause
+
 
 set _omtReleaseFile = $_omtDir/RELEASE
 

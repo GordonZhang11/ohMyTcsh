@@ -1,3 +1,5 @@
+#!/usr/bin/env tcsh
+
 # SPDX-License-Identifier: BSD-3-Clause
 
 if ( -d .git ) then
