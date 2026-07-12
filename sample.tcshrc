@@ -1,0 +1,5 @@
+set omtPlugins = ( aliases gitStatus prompt gitAliases omtInfo safeFileOperations)
+set omtTheme   = "default"
+
+source ~/.omt/ohMyTcsh.tcsh
+
