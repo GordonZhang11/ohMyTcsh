@@ -2,20 +2,20 @@
 
 # SPDX-License-Identifier: BSD-3-Clause
 
-#  ======================================
-#  Oh My Tcsh - A Plugin Manager for Tcsh
+#  =======================================
+#  Oh My Tcsh - A Shell Framework for Tcsh
 #  Copyright 2026 Gordon Zhang
-#  ======================================
+#  =======================================
 #  File: src/omtSysInfo.tcsh
 #  Provides platform information.
-#  ======================================
+#  =======================================
 
 
 # ------------
 # OS Detection
 # ------------
 # Platform, expected *BSD, Darwin, Linux
-if ($?_omtOS == 0) then
+if (! $?_omtOS ) then
   # Automatically detect system information only if 
   # the variable isn;t already set.
   # Users are able to manually set these variables
@@ -24,25 +24,28 @@ if ($?_omtOS == 0) then
   set _omtOS = `uname -s`
 
   # Set to unknown if detection failed.
-  if ($status != 0)  set _omtOS = "Unknown"
+  if ( $status != 0 )  set _omtOS = "Unknown"
 endif
+
+
+# Disable colors by default.
+set _omtColors    = 0
+set _omt256Colors = 0
+
 
 if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
 
   # --------------------------------
   # Terminal Color Support Detection
   # --------------------------------
-  set _omtColors    = 0
-  set _omt256Colors = 0
 
   set _tputPath = `which tput`
 
-  if ($?_tputPath && -x $_tputPath) then
-
+  if ( $_tputPath != "" && -x $_tputPath ) then
     set _availColors = `$_tputPath colors`
 
     # If detection successful
-    if ($status == 0) then
+    if ( $status == 0 ) then
       if ($_availColors >= 8) set _omtColors = 1
       if ($_availColors >= 256) set _omt256Colors = 1
       endif
@@ -53,19 +56,19 @@ if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
   # Terminal Dimensions Detection
   # -----------------------------
   
-  if ( $?omtTermCols == 0 ) then
+  if (! $?omtTermCols ) then
     set _omtTermCols = 80 # Default Value 80
 
-    if ( $?_tputPath && -x $_tputPath ) then
+    if ( $_tputPath != "" && -x $_tputPath ) then
       set _cols = `$_tputPath cols`
-      if ( $status == 0 && ) set _omtTermCols = $_cols
+      if ( $status == 0 ) set _omtTermCols = $_cols
     endif
   endif
 
-  if ( $?omtTermRows == 0 ) then
-    set _omtTermRows = 80 # Default Value 80
+  if (! $?omtTermRows ) then
+    set _omtTermRows = 24 # Default Value 80
 
-    if ( $?_tputPath && -x $_tputPath ) then
+    if ( $_tputPath != "" && -x $_tputPath ) then
       set _lines = `$_tputPath lines`
       if ( $status == 0 ) set _omtTermRows = $_lines
     endif

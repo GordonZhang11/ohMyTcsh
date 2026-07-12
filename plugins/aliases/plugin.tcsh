@@ -8,7 +8,7 @@
 #  ==================================================
 
 
-if ($_omtOS == Linux) then
+if ( "$_omtOS" == "Linux" ) then
   alias ls "ls --color=auto"
 else
   alias ls "ls -G"

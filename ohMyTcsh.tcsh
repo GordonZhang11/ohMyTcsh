@@ -2,13 +2,13 @@
 
 # SPDX-License-Identifier: BSD-3-Clause
 
-#  ======================================
-#  Oh My Tcsh - A Plugin Manager for Tcsh
+#  =======================================
+#  Oh My Tcsh - A Shell Framework for Tcsh
 #  Copyright 2026 Gordon Zhang
-#  ======================================
+#  =======================================
 #  File: ohMyTcsh.tcsh
 #  Main script for ohMyTcsh
-#  ======================================
+#  =======================================
 
 
 # Init

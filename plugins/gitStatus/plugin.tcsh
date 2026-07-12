@@ -8,5 +8,10 @@
 #  ===================================================
 
 
-alias precmd "source $_omtPluginsDir/gitStatus/gitStatus.tcsh"
+if ( $?precmd ) then
+  set _omtUserCmd = "$precmd"
+  alias precmd "source $_omtPluginsDir/gitStatus/gitStatus.tcsh; $_omtUserCmd"
+else
+  alias precmd "source $_omtPluginsDir/gitStatus/gitStatus.tcsh"
+endif
 
