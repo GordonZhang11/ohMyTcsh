@@ -48,7 +48,6 @@ if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
     if ( $status == 0 ) then
       if ($_availColors >= 8) set _omtColors = 1
       if ($_availColors >= 256) set _omt256Colors = 1
-      endif
     endif
   endif
 
