@@ -19,6 +19,7 @@ but rather to empower the classic shell it already is.
 ## Dependencies
 
 - Generic BSD / Darwin / Linux
+
   Developed & Tested on:
 
 ```
