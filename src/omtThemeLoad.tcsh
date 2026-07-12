@@ -14,9 +14,9 @@
 
 # Set Default theme valuables.
 # in case that theme failed to load.
-set omtColor1 = ""
-set omtColor2 = ""
-set omtColor3 = ""
+set _omtColor1 = ""
+set _omtColor2 = ""
+set _omtColor3 = ""
 
 
 # Get theme name from args

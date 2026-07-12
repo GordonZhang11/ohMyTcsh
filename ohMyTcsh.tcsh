@@ -12,7 +12,7 @@
 
 
 # Init
-set _omtInitFile = "~/.omt/src/omtInit.tcsh" # Many default variables are defined in it...
+set _omtInitFile = ~/.omt/src/omtInit.tcsh # Many default variables are defined in it...
 
 if ( -f $_omtInitFile ) then
   source $_omtInitFile
