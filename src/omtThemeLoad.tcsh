@@ -14,13 +14,13 @@
 
 # Set Default theme valuables.
 # in case that theme failed to load.
-set omtColor1
-set omtColor2
-set omtColor3
+set omtColor1 = ""
+set omtColor2 = ""
+set omtColor3 = ""
 
 
 # Get theme name from args
-set _theme = $1
+set _theme = $omtTheme
 
 if ( $?_theme == 0 ) then
   exit 0

@@ -12,12 +12,8 @@
 #  ======================================
 
 
-# Get plugin name from args
-set _plugins = $argv
-
-
 # Load plugin
-foreach _plugin ( $_plugins )
+foreach _plugin ( $omtPlugins )
   set _pluginEntry = $_omtPluginsDir/$_plugin/plugin.tcsh
   if ( -e $_pluginEntry ) then
     source $_pluginEntry
@@ -27,5 +23,5 @@ foreach _plugin ( $_plugins )
 end
 
 
-unset _plugin _pluginEntry _plugins
+unset _plugin _pluginEntry
 

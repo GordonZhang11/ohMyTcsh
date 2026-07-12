@@ -19,9 +19,9 @@ set _omtModulesDir = "$_omtDir/src"
 set _omtThemesDir  = "$_omtDir/themes"
 
 
-# Setup  aliases for OMT scripts
-alias omtThemeLoad   "source $_omtModulesDir/omtThemeLoad.tcsh $omtTheme"
-alias omtPluginLoad  "source $_omtModulesDir/omtPluginLoad.tcsh $omtPlugins"
+# Setup  aliases / commands  for OMT scripts
+alias omtThemeLoad   "source $_omtModulesDir/omtThemeLoad.tcsh"
+alias omtPluginLoad  "source $_omtModulesDir/omtPluginLoad.tcsh"
 alias omtSysInfoLoad "source $_omtModulesDir/omtSysInfo.tcsh"
 
 # TODO pluginInstall script

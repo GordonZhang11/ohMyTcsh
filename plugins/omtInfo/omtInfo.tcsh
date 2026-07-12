@@ -13,5 +13,9 @@ echo "Oh My Tcsh ( Version $_version, on $_omtOS )"
 echo "Copyright (c) 2026 Gordon Zhang. "
 echo "Licensed under the 3-Clause BSD License"
 
+echo
+echo "Plugins: $omtPlugins"
+echo "Themes : $omtTheme"
+
 unset _version _omtReleaseFile
 
