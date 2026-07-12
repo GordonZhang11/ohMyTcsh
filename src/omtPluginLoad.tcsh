@@ -25,7 +25,6 @@ foreach _plugin ( $_plugins )
     echo "OMT ERROR: Plugin $_plugin not found."
   endif
 end
-endif
 
 
 unset _plugin _pluginEntry _plugins
