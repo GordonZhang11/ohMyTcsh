@@ -22,8 +22,8 @@ set _omtColor3 = ""
 # Get theme name from args
 set _theme = $omtTheme
 
-if ( $?_theme == 0 ) then
-  exit 0
+if (! $?_theme ) then
+  return 1
 endif
 
 set _themeConfigFile = "$_omtThemesDir/$_theme.tcsh"
@@ -32,7 +32,7 @@ if ( -f $_themeConfigFile ) then
   source $_themeConfigFile
 else
   echo "OMT WARNING: Theme $_theme not found."
-  exit 0
+  return 1
 endif
 
 
