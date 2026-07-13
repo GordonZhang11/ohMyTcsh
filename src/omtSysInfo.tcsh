@@ -17,7 +17,7 @@
 # Platform, expected *BSD, Darwin, Linux
 if (! $?_omtOS ) then
   # Automatically detect system information only if 
-  # the variable isn;t already set.
+  # the variable isn't already set.
   # Users are able to manually set these variables
   # in the OMT config file
 
