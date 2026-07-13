@@ -17,8 +17,12 @@ foreach _plugin ( $omtPlugins )
   set _pluginEntry = $_omtPluginsDir/$_plugin/plugin.tcsh
   if ( -e $_pluginEntry ) then
     source $_pluginEntry
+
+    if ( $status != 0 ) then
+      echo "OMT WARNING: Plugin $_plugin Failed to load. (status=$status)."
+    endif
   else
-    echo "OMT ERROR: Plugin $_plugin not found."
+    echo "OMT WARNING: Plugin $_plugin not found, Skipping..."
   endif
 end
 
