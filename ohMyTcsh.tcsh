@@ -29,12 +29,6 @@ endif
 unset _omtInitFile
 
 
-# Load Config file
-if ( -f $_omtConfigFile ) then
-	source $_omtConfigFile
-endif
-
-
 # TODO external plugin installation management
 
 
