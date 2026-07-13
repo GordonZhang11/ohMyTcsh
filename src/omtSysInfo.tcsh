@@ -33,28 +33,28 @@ set _omtColors    = 0
 set _omt256Colors = 0
 
 
-if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
 
-  # --------------------------------
-  # Terminal Color Support Detection
-  # --------------------------------
+set _tputTest = `which tput >& /dev/null`
+
+if ( $status == 0 ) then
+# --------------------------------
+# Terminal Color Support Detection
+# --------------------------------
+
 
   set _tputPath = `which tput`
+  set _availColors = `$_tputPath colors`
 
-  if ( $_tputPath != "" && -x $_tputPath ) then
-    set _availColors = `$_tputPath colors`
-
-    # If detection successful
-    if ( $status == 0 ) then
-      if ($_availColors >= 8) set _omtColors = 1
-      if ($_availColors >= 256) set _omt256Colors = 1
-    endif
+  # If detection successful
+  if ( $status == 0 ) then
+    if ($_availColors >= 8) set _omtColors = 1
+    if ($_availColors >= 256) set _omt256Colors = 1
   endif
 
-  # -----------------------------
-  # Terminal Dimensions Detection
-  # -----------------------------
-  
+# -----------------------------
+# Terminal Dimensions Detection
+# -----------------------------
+
   if (! $?omtTermCols ) then
     set _omtTermCols = 80 # Default Value 80
 
@@ -72,8 +72,7 @@ if (-x /usr/bin/tput || -x /bin/tput) then # `tput` for term info
       if ( $status == 0 ) set _omtTermRows = $_lines
     endif
   endif
+
+  unset _tputPath _availColors _cols _lines
 endif
-
-
-unset _tputPath _availColors _cols _lines
 
