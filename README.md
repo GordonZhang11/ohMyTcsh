@@ -61,7 +61,7 @@ Or copy `.sample.tcshrc` to `~/.tcshrc` as required.
 | `aliases`            | Shortcuts for daily operations    |
 | `gitAliases`         | Shortcuts for common git commands |
 | `gitStatus`          | Git status display in the prompt  |
-| lsColor              | Coloured output for `ls` & `tree` |
+| `lsColor`            | Coloured output for `ls` & `tree` |
 | `omtInfo`            | OMT Information                   |
 | `prompt`             | Prompt Display                    |
 | `safeFileOperations` | `rm` `mv` `cp` safer aliases      |
