@@ -55,7 +55,7 @@ if ( $status == 0 ) then
 # Terminal Dimensions Detection
 # -----------------------------
 
-  if (! $?omtTermCols ) then
+  if (! $?_omtTermCols ) then
     set _omtTermCols = 80 # Default Value 80
 
     if ( $_tputPath != "" && -x $_tputPath ) then
@@ -64,7 +64,7 @@ if ( $status == 0 ) then
     endif
   endif
 
-  if (! $?omtTermRows ) then
+  if (! $?_omtTermRows ) then
     set _omtTermRows = 24 # Default Value 80
 
     if ( $_tputPath != "" && -x $_tputPath ) then
