@@ -18,10 +18,11 @@ if ( -f $_omtInitFile ) then
   source $_omtInitFile
   if ( $status != 0 ) then
     echo "OMT FATAL: Failed to init."
-    exit 0
+    return 1
   endif
 else
   echo "OMT FATAL: Modules not found."
+  return 1
 endif
 
 
