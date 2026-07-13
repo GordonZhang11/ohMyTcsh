@@ -39,7 +39,7 @@ endif
 
 
 # OMT Modules Load
-omtSysInfoLoad
+_omtSysInfoLoad
 omtThemeLoad
 omtPluginLoad
 
@@ -49,5 +49,4 @@ if ( $_omtColors ) then
   setenv COLORTERM
   setenv LS_COLORS
 endif
-
 
