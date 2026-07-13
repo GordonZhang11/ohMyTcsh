@@ -3,34 +3,34 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 #  ==================================================
-#  OMT Plugin Git Aliases: Shortcuts for git commands
+#  OMT Plugin Git omtAliases: Shortcuts for git commands
 #  Copyright 2026 Gordon Zhang
 #  ==================================================
 
 
 # Core
-alias g    "git"
-alias gi   "git init"
-alias gst  "git status"
-alias gbr  "git branch"
-alias gd   "git diff"
+omtAlias g    "git"
+omtAlias gi   "git init"
+omtAlias gst  "git status"
+omtAlias gbr  "git branch"
+omtAlias gd   "git diff"
 
 # Staging & Committing
-alias ga   "git add"
-alias gaa  "git add *"
-alias gcm  "git commit -m"
-alias gcam "git commit -a -m"
+omtAlias ga   "git add"
+omtAlias gaa  "git add ."
+omtAlias gcm  "git commit -m"
+omtAlias gcam "git commit -a -m"
 
 # Branching & Merging
-alias gco  "git checkout"
-alias gm   "git merge"
-alias gcl  "git clone"
+omtAlias gco  "git checkout"
+omtAlias gm   "git merge"
+omtAlias gcl  "git clone"
 
 # Remote Operations
-alias gp   "git push"
-alias gl   "git pull"
-alias gra  "git remote add"
+omtAlias gp   "git push"
+omtAlias gl   "git pull"
+omtAlias gra  "git remote add"
 
 
 # Temporary Storage
-alias gsh  "git stash"
+omtAlias gsh  "git stash"

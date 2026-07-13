@@ -23,10 +23,12 @@ set _omtThemesDir  = $_omtDir/themes
 #
 # DO NOT CHANGE: The load sequence shouldn't be changed.
 #
-alias omtThemeLoad   "source $_omtModulesDir/omtThemeLoad.tcsh"
-alias omtPluginLoad  "source $_omtModulesDir/omtPluginLoad.tcsh"
+alias omtThemeLoad  "source $_omtModulesDir/omtThemeLoad.tcsh"
+alias omtPluginLoad "source $_omtModulesDir/omtPluginLoad.tcsh"
 
 alias _omtSysInfoLoad "source $_omtModulesDir/omtSysInfo.tcsh"
+
+alias omtAlias "source $_omtModulesDir/omtAlias.tcsh"
 
 # TODO pluginInstall script
 

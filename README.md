@@ -45,11 +45,11 @@ git clone https://codeberg.org/gzh/ohMyTcsh.git ~/.omt/
 
 ```shell
 # Set as required
-set omtPlugins = ( aliases gitStatus prompt gitAliases omtInfo safeFileOperations )
+set omtPlugins = ( aliases gitAliases gitStatus lsColor omtInfo prompt safeFileOperations )
 set omtTheme   = "default"
 
-# OMT Load
 source ~/.omt/ohMyTcsh.tcsh
+
 ```
 
 Or copy `.sample.tcshrc` to `~/.tcshrc` as required.
@@ -61,6 +61,7 @@ Or copy `.sample.tcshrc` to `~/.tcshrc` as required.
 | `aliases`            | Shortcuts for daily operations    |
 | `gitAliases`         | Shortcuts for common git commands |
 | `gitStatus`          | Git status display in the prompt  |
+| lsColor              | Coloured output for `ls` & `tree` |
 | `omtInfo`            | OMT Information                   |
 | `prompt`             | Prompt Display                    |
 | `safeFileOperations` | `rm` `mv` `cp` safer aliases      |

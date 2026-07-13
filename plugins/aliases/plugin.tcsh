@@ -3,26 +3,15 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 #  ==================================================
-#  OMT Plugin Aliases: Shortcuts for daily operations
+#  OMT Plugin omtAliases: Shortcuts for daily operations
 #  Copyright 2026 Gordon Zhang
 #  ==================================================
 
+omtAlias ll  "ls -lh"
+omtAlias la  "ls -alh"
 
-if ( "$_omtOS" == "Linux" ) then
-  alias ls "ls --color=auto"
-else
-  alias ls "ls -G"
-endif
+omtAlias ..  "cd .."
+omtAlias ... "cd ../.."
 
-
-alias tree "tree -C"
-
-
-alias ll  "ls -lh"
-alias la  "ls -alh"
-
-alias ..  "cd .."
-alias ... "cd ../.."
-
-alias h   "history"
+omtAlias h   "history"
 
