@@ -17,7 +17,7 @@ omtAlias gd   "git diff"
 
 # Staging & Committing
 omtAlias ga   "git add"
-omtAlias gaa  "git add ."
+omtAlias gaa  "git add --all"
 omtAlias gcm  "git commit -m"
 omtAlias gcam "git commit -a -m"
 
