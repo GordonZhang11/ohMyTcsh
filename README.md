@@ -35,11 +35,11 @@ tcsh 6.22.04 (Astron) 2021-04-26 (x86_64-amd-FreeBSD) options wide,nls,dl,al,kan
 
 ## Installation
 
-- Clone into `~/.omt/`
+- Download a [Release](https://codeberg.org/gzh/ohMyTcsh/releases)
 
-```Shell
-git clone https://codeberg.org/gzh/ohMyTcsh.git ~/.omt/
-```
+  or Get a development snapshot with `git clone`
+
+- Unzip into `~/.omt/`
 
 - Edit `.tcshrc`
 
