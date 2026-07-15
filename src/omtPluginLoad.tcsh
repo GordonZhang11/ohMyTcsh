@@ -14,9 +14,9 @@
 
 # Load plugin
 foreach _plugin ( $omtPlugins )
-  set _pluginEntry = $_omtPluginsDir/$_plugin/plugin.tcsh
-  if ( -e $_pluginEntry ) then
-    source $_pluginEntry
+  set _pluginEntry = "$_omtPluginsDir/$_plugin/plugin.tcsh"
+  if ( -e "$_pluginEntry" ) then
+    source "$_pluginEntry"
 
     if ( $status != 0 ) then
       echo "OMT WARNING: Plugin $_plugin Failed to load. (status=$status)."

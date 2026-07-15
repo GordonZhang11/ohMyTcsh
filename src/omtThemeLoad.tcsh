@@ -28,8 +28,8 @@ endif
 
 set _themeConfigFile = "$_omtThemesDir/$_theme.tcsh"
 
-if ( -f $_themeConfigFile ) then
-  source $_themeConfigFile
+if ( -f "$_themeConfigFile" ) then
+  source "$_themeConfigFile"
 else
   echo "OMT WARNING: Theme $_theme not found."
   return 0
