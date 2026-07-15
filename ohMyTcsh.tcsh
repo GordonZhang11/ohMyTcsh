@@ -41,6 +41,5 @@ omtPluginLoad
 if ( $_omtColors ) then
   # Enable coloured terminal outputs for ls, tree, etc
   setenv COLORTERM
-  setenv LS_COLORS
 endif
 
