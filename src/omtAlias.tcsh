@@ -15,7 +15,7 @@
 # Argument check
 if ( $# < 2 ) then
     echo "OMT ERROR: Not enough arguments for omtAlias."
-    exit 1
+    return
 endif
 
 
