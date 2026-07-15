@@ -33,6 +33,7 @@ if ( -f "$_themeConfigFile" ) then
 
   if ( $status != 0 ) then
     echo "OMT WARNING: Theme $_theme failed to load."
+  endif
 else
   echo "OMT WARNING: Theme $_theme not found."
   return 0

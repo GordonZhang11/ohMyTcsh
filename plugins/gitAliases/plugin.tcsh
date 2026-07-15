@@ -34,3 +34,4 @@ omtAlias gra  "git remote add"
 
 # Temporary Storage
 omtAlias gsh  "git stash"
+
