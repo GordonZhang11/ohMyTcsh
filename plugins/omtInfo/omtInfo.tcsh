@@ -8,6 +8,8 @@ set _omtReleaseFile = $_omtDir/RELEASE
 set _version = unknown # Default value Unknown
 if ( -f $_omtReleaseFile ) set _version = `cat $_omtReleaseFile`
 
+set _tcshInfo = `tcsh --version`
+
 
 echo "Oh My Tcsh ( Version $_version, on $_omtOS )"
 echo "Copyright (c) 2026 Gordon Zhang. "
@@ -17,5 +19,12 @@ echo
 echo "Plugins: $omtPlugins"
 echo "Themes : $omtTheme"
 
-unset _version _omtReleaseFile
+echo
+echo -n "Tcsh: "
+echo $_tcshInfo
+
+
+unset _version _omtReleaseFile _tcshInfo
+
+
 
