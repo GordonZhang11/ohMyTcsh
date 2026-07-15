@@ -30,6 +30,9 @@ set _themeConfigFile = "$_omtThemesDir/$_theme.tcsh"
 
 if ( -f "$_themeConfigFile" ) then
   source "$_themeConfigFile"
+
+  if ( $status != 0 ) then
+    echo "OMT WARNING: Theme $_theme failed to load."
 else
   echo "OMT WARNING: Theme $_theme not found."
   return 0
