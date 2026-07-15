@@ -19,18 +19,16 @@ but rather to empower the classic shell it already is.
 ## Dependencies
 
 - Generic BSD / Darwin / Linux
-
-  Developed & Tested on:
-
-```
-FreeBSD 15.1-RELEASE-p1 GENERIC amd64
-```
-
 - Tcsh
-  Developed & Tested on:
+
 
 ```
+# Developed & tested on
+FreeBSD 15.1-RELEASE-p1 GENERIC amd64
 tcsh 6.22.04 (Astron) 2021-04-26 (x86_64-amd-FreeBSD) options wide,nls,dl,al,kan,sm,rh,color,filec
+
+# Tested on
+Fedora Linux 44, amd64
 ```
 
 ## Installation
