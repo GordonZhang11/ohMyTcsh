@@ -12,8 +12,7 @@
 
 
 # Set default paths
-set _omtConfigFile = ~/.omtConfig.tcsh
-set _omtDir        = ~/.omt
+set _omtDir        = $omtPrefix
 set _omtPluginsDir = $_omtDir/plugins
 set _omtModulesDir = $_omtDir/src
 set _omtThemesDir  = $_omtDir/themes

@@ -1,0 +1,13 @@
+# Sample .tcshrc for global installation
+#
+# omtPrefix set to /usr/share/ohmytcsh
+
+set omtPrefix  = "/usr/share/ohmytcsh"  # Change as required.
+
+
+# Set the plugins and theme as required.
+set omtPlugins = ( aliases gitAliases gitStatus lsColor omtInfo prompt safeFileOperations )
+set omtTheme   = "default"
+
+source $omtPrefix/ohMyTcsh.tcsh
+

@@ -1,0 +1,13 @@
+# Sample .tcshrc for user installation
+#
+# omtPrefix set to ~/.omt
+
+set omtPrefix  = "~/.omt"  # Change as required.
+
+
+# Set the plugins and theme as required.
+set omtPlugins = ( aliases gitAliases gitStatus lsColor omtInfo prompt safeFileOperations )
+set omtTheme   = "default"
+
+source $omtPrefix/ohMyTcsh.tcsh
+

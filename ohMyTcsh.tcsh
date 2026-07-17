@@ -12,7 +12,13 @@
 
 
 # Init
-set _omtInitFile = ~/.omt/src/omtInit.tcsh # Many default variables are defined in it...
+if (! $?omtPrefix ) then
+  # omtPrefix is normally defined in .tcshrc
+  # If not, the default value will be ~/.omt
+  set omtPrefix = "~/.omt"
+endif
+
+set _omtInitFile = "$omtPrefix/src/omtInit.tcsh"
 
 if ( -f $_omtInitFile ) then
   source $_omtInitFile
