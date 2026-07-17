@@ -16,6 +16,9 @@ echo "Copyright (c) 2026 Gordon Zhang. "
 echo "Licensed under the 3-Clause BSD License"
 
 echo
+echo "Directory: $_omtDir"
+
+echo
 echo "Plugins: $omtPlugins"
 echo "Themes : $omtTheme"
 
