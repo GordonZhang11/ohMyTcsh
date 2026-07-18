@@ -50,7 +50,7 @@ source ~/.omt/ohMyTcsh.tcsh
 
 ```
 
-Or copy `.sample.tcshrc` to `~/.tcshrc` as required.
+Or copy `userInst.tcshrc` to `~/.tcshrc` as required.
 
 ## Available Plugins
 
