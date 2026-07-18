@@ -8,8 +8,8 @@ TENEX C Shell ( `tcsh` ) is used across Various UNIX / Linux systems.
 Although it is no longer widely used on modern platforms,
 it continues to be an important choice on many legacy systems.
 
-Oh My Tcsh ( OMT ) is designed to bridge the gap and
-**improve the experience of the legacy systems**.
+Oh My Tcsh ( OMT ) is a native Tcsh shell framework and
+**improves the experience of the legacy systems**.
 
 With batteries included, OMT helps the legacy Tcsh users **improve their
 interactive shell experience**, using the minimum amount of resources.
@@ -33,20 +33,30 @@ Fedora Linux 44, amd64
 ## Installation
 
 - Download a [Release](https://codeberg.org/gzh/ohMyTcsh/releases)
+  Unzip into `~/.omt/`
 
-  or Get a development snapshot with `git clone`
+- Or get a development snapshot with `git`
 
-- Unzip into `~/.omt/`
+```shell
+git clone https://codeberg.org/gzh/ohMyTcsh.git ~/.omt/
+```
 
 - Edit `.tcshrc`
 
 ```shell
-# Set as required
+# Sample .tcshrc for user installation
+# i.e. installed with git clone
+#
+# omtPrefix set to ~/.omt
+
+set omtPrefix  = "~/.omt"  # Change as required.
+
+
+# Set the plugins and theme as required.
 set omtPlugins = ( aliases gitAliases gitStatus lsColor omtInfo prompt safeFileOperations )
 set omtTheme   = "default"
 
-source ~/.omt/ohMyTcsh.tcsh
-
+source $omtPrefix/ohMyTcsh.tcsh
 ```
 
 Or copy `sample.userInst.tcshrc` to `~/.tcshrc` as required.
