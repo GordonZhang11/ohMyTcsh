@@ -33,7 +33,8 @@ Fedora Linux 44, amd64
 ## Installation
 
 - Download a [Release](https://codeberg.org/gzh/ohMyTcsh/releases)
-  Unzip into `~/.omt/`
+
+Unzip into `~/.omt/`
 
 - Or get a development snapshot with `git`
 
