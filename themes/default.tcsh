@@ -11,3 +11,4 @@
 set _omtColor1 = "%{\033[34m%}"  # Blue
 set _omtColor2 = "%{\033[36m%}"  # Cyan
 set _omtColor3 = "%{\033[32m%}"  # Green
+

@@ -29,5 +29,3 @@ echo $_tcshInfo
 
 unset _version _omtReleaseFile _tcshInfo
 
-
-

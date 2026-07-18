@@ -29,5 +29,3 @@ alias _omtSysInfoLoad "source $_omtModulesDir/omtSysInfo.tcsh"
 
 alias omtAlias "source $_omtModulesDir/omtAlias.tcsh"
 
-# TODO pluginInstall script
-

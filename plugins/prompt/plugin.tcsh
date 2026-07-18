@@ -14,3 +14,4 @@ if ($_omtColors) then
 else
   set prompt = "%~ >"
 endif
+

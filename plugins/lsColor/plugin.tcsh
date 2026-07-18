@@ -17,3 +17,4 @@ if ( $_omtColors ) then
 
   alias tree "tree -C"
 endif
+

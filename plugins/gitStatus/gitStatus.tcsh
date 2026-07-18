@@ -21,3 +21,4 @@ if ( $status == 0 ) then
 
   unset _gitBranch _modified
 endif
+
