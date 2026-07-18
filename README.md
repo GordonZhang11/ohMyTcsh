@@ -21,7 +21,6 @@ but rather to empower the classic shell it already is.
 - Generic BSD / Darwin / Linux
 - Tcsh
 
-
 ```
 # Developed & tested on
 FreeBSD 15.1-RELEASE-p1 GENERIC amd64
@@ -50,7 +49,7 @@ source ~/.omt/ohMyTcsh.tcsh
 
 ```
 
-Or copy `userInst.tcshrc` to `~/.tcshrc` as required.
+Or copy `sample.userInst.tcshrc` to `~/.tcshrc` as required.
 
 ## Available Plugins
 
