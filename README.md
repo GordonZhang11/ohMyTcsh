@@ -30,7 +30,21 @@ tcsh 6.22.04 (Astron) 2021-04-26 (x86_64-amd-FreeBSD) options wide,nls,dl,al,kan
 Fedora Linux 44, amd64
 ```
 
-## Installation
+## Global Installation (Managed)
+
+### FreeBSD Package
+
+- Download from [Releases](https://codeberg.org/gzh/ohMyTcsh/releases)
+
+- Install with `pkg`
+
+- Copy `<prefix>/ohmytcsh/.sample.globInst.tcshrc` to `~/.tcshrc`
+
+See also: message output during pkg installation
+
+> `<prefix>` is usually `/usr/local/share` by default
+
+## User Installation (Manual)
 
 - Download a [Release](https://codeberg.org/gzh/ohMyTcsh/releases)
 
