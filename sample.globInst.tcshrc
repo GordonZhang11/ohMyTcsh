@@ -1,9 +1,9 @@
 # Sample .tcshrc for global installation
 # i.e. Installed with ports
 #
-# omtPrefix set to /usr/share/ohmytcsh
+# omtPrefix set to /usr/local/share/ohmytcsh
 
-set omtPrefix  = "/usr/share/ohmytcsh"  # Change as required.
+set omtPrefix  = "/usr/local/share/ohmytcsh"  # Change as required.
 
 
 # Set the plugins and theme as required.
