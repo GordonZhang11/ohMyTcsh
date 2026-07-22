@@ -11,9 +11,11 @@ omtAlias ll  "ls -lh"
 omtAlias la  "ls -alh"
 omtAlias lr  "ls -R"
 
+omtAlias .   "pwd"
 omtAlias ..  "cd .."
 omtAlias ... "cd ../.."
 omtAlias -   "cd -"
+omtAlias ~   "cd ~"
 
 omtAlias h   "history"
 
