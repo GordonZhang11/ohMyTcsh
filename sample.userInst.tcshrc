@@ -6,7 +6,10 @@
 ###############
 # OMT Section #
 ###############
-set omtPrefix  = "~/.omt"  # Change as required.
+
+# ATTENTION: Change to the correct path
+# if installed in a non-default dir
+set omtPrefix  = "~/.omt"
 
 
 # Set the plugins and theme as required.
@@ -16,11 +19,17 @@ set omtTheme   = "default"
 source $omtPrefix/ohMyTcsh.tcsh
 
 
+
 ################
 # User Section #
 ################
 
-# Tab completion.
-# Use as required
+# Tab auto completing
 set autolist
+
+# prompting before 'rm *'
+set rmstar
+
+# Prevent output redirection from overwriting existing files.
+set noclobber
 
