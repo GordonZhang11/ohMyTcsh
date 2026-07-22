@@ -3,6 +3,9 @@
 #
 # omtPrefix set to ~/.omt
 
+###############
+# OMT Section #
+###############
 set omtPrefix  = "~/.omt"  # Change as required.
 
 
@@ -11,4 +14,13 @@ set omtPlugins = ( aliases gitAliases gitStatus lsColor omtInfo prompt safeFileO
 set omtTheme   = "default"
 
 source $omtPrefix/ohMyTcsh.tcsh
+
+
+################
+# User Section #
+################
+
+# Tab completion.
+# Use as required
+set autolist
 
