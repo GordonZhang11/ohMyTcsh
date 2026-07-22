@@ -8,10 +8,12 @@
 #  =============================================
 
 
-# Prompt: [CWD] >
-if ($_omtColors) then
-  set prompt = "${_omtColor1}%~${_reset} ${_omtColor2} >${_reset} "
-else
-  set prompt = "%~ >"
+if ( $?prompt ) then
+  # Prompt: [CWD] >
+  if ($_omtColors) then
+    set prompt = "${_omtColor1}%~${_reset} ${_omtColor2} >${_reset} "
+  else
+    set prompt = "%~ >"
+  endif
 endif
 
