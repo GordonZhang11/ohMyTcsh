@@ -9,9 +9,14 @@
 
 omtAlias ll  "ls -lh"
 omtAlias la  "ls -alh"
+omtAlias lr  "ls -R"
 
 omtAlias ..  "cd .."
 omtAlias ... "cd ../.."
+omtAlias -   "cd -"
 
 omtAlias h   "history"
+
+omtAlias dh  "df -h"
+omtAlias ds  "du -sh"
 
